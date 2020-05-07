@@ -33,7 +33,7 @@ and (max-device-width : 700px) {
 
 .quiz-container{
     max-width: 700px;
-    min-height: 480px;
+    min-height: 510px;
     background-color: #ffffff;
     margin:70px auto;
     margin-top: 15px;
