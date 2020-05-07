@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (min-device-width:320px)"  href="main.css">
+    <title>Crazy Question Quiz</title>
+</head>
+<body>
+    <h1 id="header">Quiz 1: Take the Crazy Question Quiz</h1>
+    <div class="quiz-container">
+        <div class="question-number">
+                <h3>Question <span class="question-num-value"></span> of <span class="total-question"></span></h3>
+            <div class="question"></div>
+            <div class="options">
+                <div id="0" class="option1" onclick="check(this)"></div>
+                <div id="1" class="option2"onclick="check(this)"></div>
+                <div id="2" class="option3" onclick="check(this)"></div>
+            </div>
+            <div class="button">
+                <button type="button" class="btn" onclick="next()">Next</button>
+            </div>
+            <div class="answers-tracker">
+                
+            </div>
+        </div>
+    </div>
+    <div class="quiz-over">
+        <div class="box">
+        <h1> You Did Your Best!<br>
+            You got <span class="correct-answers"></span> out of <span class="total-question2"></span> answers correct! <br>Thats <span class="percentage"></span>
+                Try again.
+        </h1>
+        <button type="button" onclick="tryAgain()">Restart</button>
+    </div>
+    </div>
+
+    <script type="text/javascript" src="index.js"> </script>
+
+    </div>
+</body>
+</html>
