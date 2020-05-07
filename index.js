@@ -116,7 +116,7 @@ function randomQuestion() { //randomize question displayed
     }
     else{
         if(myArray.length>0){
-            for(let i=0; i<myArray; i++){
+            for(let i=0; i<myArray.length; i++){
                 if(myArray[i]==randomNumber){
                     hitDuplicate=1;
                     break;
@@ -127,8 +127,8 @@ function randomQuestion() { //randomize question displayed
            }
            else {
             questionIndex=randomNumber;
-            load();
             myArr.push(questionIndex);
+            load();
            }
         }
         if(myArray.length==0){
@@ -141,24 +141,24 @@ function randomQuestion() { //randomize question displayed
     }
 }
 
-function answerTracker(){
+function answerTracker(){ // create answer tracker for questions answered
     for(let i=0; i<questions.length; i++){
         const div=document.createElement("div")
         answerTrackerContainer.appendChild(div);
     }
 }
 
-function updateAnswerTracker(classNam){
+function updateAnswerTracker(classNam){ // update answer tracker
         answerTrackerContainer.children[index-1].classList.add(classNam);
 }
 
-function quizOver(){
+function quizOver(){ // results page
     document.querySelector(".quiz-over").classList.add("show");
     correctAnswerSpan.innerHTML=score;
     totalQuestionSpan2.innerHTML=questions.length;
     percentage.innerHTML= (score/questions.length)*100 + "%";
 }
-function tryAgain(){
+function tryAgain(){ // to reset quiz
     window.location.reload();
 }
 
